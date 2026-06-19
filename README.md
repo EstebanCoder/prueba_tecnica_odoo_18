@@ -47,20 +47,10 @@ security/ → Control de acceso a los modelos
 manifest.py → Configuración del módulo
 🛠️ Tecnologías Utilizadas
 Odoo 18
-Python 3
-OpenPyXL
+Python 
 XML (vistas Odoo)
 PostgreSQL
-🧠 Valor Técnico del Proyecto
 
-Este desarrollo evidencia competencias en:
 
-Creación de módulos personalizados en Odoo
-Integración de datos externos mediante Excel
-Implementación de lógica de negocio en Python
-Validación y control de calidad de datos
-Diseño de vistas analíticas para soporte de decisiones
-Manejo de errores y experiencia de usuario
 👨‍💻 Autor
-
 Johan Esteban Rodriguez Duarte
