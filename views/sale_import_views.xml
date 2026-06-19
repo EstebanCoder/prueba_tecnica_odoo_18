@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="view_imported_sale_tree" model="ir.ui.view">
+        <field name="name">imported.sale.tree</field>
+        <field name="model">imported.sale</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="date"/>
+                <field name="customer"/>
+                <field name="seller"/>
+                <field name="product"/>
+                <field name="quantity"/>
+                <field name="unit_value"/>
+                <field name="total_value"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_imported_sale_form" model="ir.ui.view">
+        <field name="name">imported.sale.form</field>
+        <field name="model">imported.sale</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="customer"/>
+                        <field name="seller"/>
+                        <field name="product"/>
+                        <field name="quantity"/>
+                        <field name="unit_value"/>
+                        <field name="total_value"/>
+                        <field name="state"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_imported_sale_search" model="ir.ui.view">
+        <field name="name">imported.sale.search</field>
+        <field name="model">imported.sale</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="customer"/>
+                <field name="seller"/>
+                <field name="product"/>
+                <field name="state"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_imported_sale_graph" model="ir.ui.view">
+        <field name="name">imported.sale.graph</field>
+        <field name="model">imported.sale</field>
+        <field name="arch" type="xml">
+            <graph string="Ventas por vendedor" type="bar">
+                <field name="seller"/>
+                <field name="total_value" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_imported_sale_pivot" model="ir.ui.view">
+        <field name="name">imported.sale.pivot</field>
+        <field name="model">imported.sale</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="seller" type="row"/>
+                <field name="product" type="col"/>
+                <field name="total_value" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+</odoo>

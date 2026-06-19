@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_imported_sale" model="ir.actions.act_window">
+        <field name="name">Dashboard Ventas</field>
+        <field name="res_model">imported.sale</field>
+        <field name="view_mode">list,form,graph,pivot</field>
+    </record>
+
+    <record id="action_import_sales_wizard" model="ir.actions.act_window">
+        <field name="name">Importar Excel</field>
+        <field name="res_model">import.sales.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_sales_root"
+              name="Ventas Importadas"/>
+
+    <menuitem id="menu_sales_dashboard"
+              parent="menu_sales_root"
+              action="action_imported_sale"
+              name="Dashboard"/>
+
+    <menuitem id="menu_sales_import"
+              parent="menu_sales_root"
+              action="action_import_sales_wizard"
+              name="Importar Excel"/>
+
+</odoo>
